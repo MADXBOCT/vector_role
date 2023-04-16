@@ -1,0 +1,21 @@
+---
+# This is an example playbook to execute Ansible tests.
+
+#- name: Verify
+#  hosts: all
+#  gather_facts: false
+#  tasks:
+#  - name: Example assertion
+#    ansible.builtin.assert:
+#      that: true
+
+- name: Verify
+  hosts: all
+  gather_facts: false
+  tasks:
+  - name: List files in vector home dir
+    command: ls /opt/vector/
+    register: list_files
+  - name: Check vector config is present
+    ansible.builtin.assert:
+      that: "'vector.toml' in list_files.stdout_lines"

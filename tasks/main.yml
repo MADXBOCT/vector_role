@@ -1,5 +1,5 @@
 ---
-# tasks file for vector-role
+# tasks file for vector_role
 - name: Download Vector from remote URL
   ansible.builtin.get_url:
     url: "https://packages.timber.io/vector/{{ vector_version }}/vector-{{ vector_version }}-{{ vec_arc_var }}-unknown-linux-musl.tar.gz"

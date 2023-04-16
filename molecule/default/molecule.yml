@@ -3,9 +3,6 @@ dependency:
   name: galaxy
 driver:
   name: docker
-#lint:
-#  ansible-lint .
-#  yamllint .
 platforms:
   - name: centos7
     image: docker.io/pycontribs/centos:7

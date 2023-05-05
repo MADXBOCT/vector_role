@@ -1,5 +1,6 @@
 galaxy_info:
   role_name: vector_role
+  namespace: qqq
   author: Sergey Gudimov
   description: This role install vector
   company: Netology
